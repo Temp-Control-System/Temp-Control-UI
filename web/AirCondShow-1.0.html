@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"
+          name="viewport"/>
+    <title>空调状态显示</title>
+    <link href="./css/AirCondShow-1.0.css" rel="stylesheet">
+    <script src="./js/AirCondShow-1.0.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.7.0/echarts-en.min.js"></script>
+</head>
+
+<body>
+<div class="GuestInfo">
+    <div class="room">Room:<span id="roomId"></span></div>
+	<div class="downbill">
+    	<button id="btn2bill" onclick="downBill()">下载账单</button>
+    	<button id="btn2detail" onclick="downDetail()">下载详单</button>
+	</div>
+</div>
+<header>
+    <strong>空调状态显示</strong>
+</header>
+<div id="realCharts" style="width: 600px; height: 400px"></div>
+<div class="showTitle">
+    <ul>运行状态</ul>
+    <ul>模式</ul>
+    <ul>空调风速</ul>
+    <ul>设置温度</ul>
+    <ul>实时温度</ul>
+    <ul>计费</ul>
+</div>
+<div class="returnStates">
+    <input id="status">
+    <input id="mode">
+    <input id="wind">
+    <input id="targetTemperature">
+    <input id="temperature">
+    <input id="totalCost">
+</div>
+<div class="goSet">
+    <button id="btngoSet" onclick="window.location='AirCondSet-1.0.html'">设置</button>
+</div>
+<div class="powerOff">
+    <button id="powerOff" onclick="shutDown()">关机</button>
+</div>
+</body>
+
+</html>

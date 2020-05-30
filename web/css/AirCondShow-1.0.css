@@ -1,0 +1,114 @@
+@charset "UTF-8";
+body{
+    margin: 0px;
+    background: thistle;
+}
+header{
+    width: 100%;
+    background-color: lightblue;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 70px;
+    float: left;
+}
+.GuestInfo{
+    text-align: center;
+    background: lightsalmon;
+    width: 100%;
+    float: left;
+}
+.room{
+    padding-top: 10px;
+    font-size: 30px;
+    text-align: center;
+    background-color: khaki;
+    width: 80%;
+    height: 50px;
+    float: left;
+}
+.downbill{
+    width: 20%;
+    height: 50px;
+    float: left;
+}
+
+#btn2bill{
+	padding: 15px 32px;
+	font-size: 16px;
+    background: teal;
+    float: left;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#btn2detail{
+	padding: 15px 32px;
+	font-size: 16px;
+    background: pink;
+    float: left;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.showTitle {
+    width: 100%;
+    text-align: center;
+    float: left;
+    background: khaki;
+    font-size: 30px;
+}
+.returnStates{
+    text-align: center;
+    width: 100%;
+    float: left;
+    background: khaki;
+    height: 100px;
+    font-size: 20px;
+}
+input{
+    width: 16%;
+    outline-style: none;
+    border-radius: 20px;
+    padding: 10px 0px;
+}
+ul{
+    float: left; 
+    list-style: none;
+    width: 14%;
+}
+
+.goSet{
+    width: 45%;
+    float: left;
+    text-align: center;
+    background: lavender;
+    padding-right: 5%;
+}
+#btngoSet{
+    padding: 15px 32px;
+    font-size: 16px;
+    background: teal;
+    float: right;
+    padding-right: 5%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.powerOff{
+    width: 40%;
+    padding-left: 5%;
+    float: left;
+    text-align: center;
+    background-color: cadetblue;
+}
+#powerOff{
+    padding: 15px 32px;
+    font-size: 16px;
+    background: teal;
+    float: left;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
