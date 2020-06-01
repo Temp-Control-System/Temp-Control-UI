@@ -6,37 +6,40 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
     <title>空调状态设置</title>
-    <link rel="stylesheet" href="./css/AirCondSet-1.0.css" />
-    <script src="./js/AirCondSet-1.0.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="./js/AirCondSet-1.0.js"></script>
+    <link rel="stylesheet" href="./css/AirCondSet-1.0.css" />
 </head>
 
 <body>
     <div class="container">
+        <div class="room">Room<span name="roomId" id="roomId"></span></div>
         <header><b>空调状态设置</b></header>
         <form action="AirCondShow-1.0.html" method="GET" name="form1" id="form1">
-            <div class="mode">
-                <strong>模式</strong>
-                <input type="radio" name="mode" id="mode" value="REFRIGERATION">制冷
-                <input type="radio" name="mode" id="mode" value="HEATING">制热
+            <div class="airInfo">
+                <div class="wind">
+                    <span>风速</span>
+                    <input type="radio" name="wind" id="wind" value="LOW" />LOW
+                    <input type="radio" name="wind" id="wind" value="MIDDLE" />MIDDLE
+                    <input type="radio" name="wind" id="wind" value="HIGH" />HIGH
+                </div>
+                <div class="mode">
+                    <span>模式</span>
+                    <input type="radio" name="mode" id="mode" value="REFRIGERATION">REFRIGERATION
+                    <input type="radio" name="mode" id="mode" value="HEATING">HEATING
+                </div>
+                <div class="temperature">
+                    <span>温度</span>
+                    <input type="text" required name="targetTemperature" id="targetTemperature">
+                    <span id="checkTemp"></span>
+                </div>
+                <div class="btngoShow">
+                    <button type="submit" id="btngoShow" onclick="affirm();" >确认</button>
+                    <button type="reset" id="btnReset">重置</button>
+                </div>
             </div>
-            <div class="wind">
-                <strong>风速</strong>
-                <input type="radio" name="wind" id="wind" value="LOW" />LOW
-                <input type="radio" name="wind" id="wind" value="MIDDLE" />MIDDLE
-                <input type="radio" name="wind" id="wind" value="HIGH" />HIGH
-            </div>
-            <div class="temperature">
-                <strong>温度</strong>
-                <input type="text" name="targetTemperature" id="targetTemperature">
-                <span id="checkTemp"></span>
-            </div>
-            <div class="btngoShow">
-                <button type="submit" id="btngoShow" onclick="affirm()" >确认</button>
-                <button type="reset" id="btngoShow">重置</button>
-            </div>
-        </form>
-        
+        </form> 
     </div>
 </body>
 
