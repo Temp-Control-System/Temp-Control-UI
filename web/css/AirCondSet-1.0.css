@@ -1,0 +1,88 @@
+@charset "UTF-8";
+body {
+    margin: 0px;
+    background: rgb(177, 141, 177);
+}
+header{
+    position: relative;
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 70px;
+}
+.room{
+    width: 100%;
+    padding-top: 10px;
+    font-size: 30px;
+    text-align: left;
+    height: 50px;
+    float: left;
+    color: rgb(34, 25, 28);
+    font-weight: bold;
+}
+#roomId{
+    outline-style: none;
+    border: 0px;
+    padding-left: 5%;
+    color: rgb(31, 18, 44);
+    font-size: 30px;
+    text-decoration: underline;
+}
+/*
+.airInfo{
+    float: left;
+    background-color: thistle;
+    width: 60%;
+    padding-left: 40%;
+    text-align: left;
+    line-height: 50px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+*/
+#form1{
+    float: left;
+    background-color: thistle;
+    width: 60%;
+    padding-left: 40%;
+    text-align: left;
+    line-height: 50px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+span{
+    font-size: 18px;
+}
+#wind , #mode{
+    padding-bottom: 4%;
+    padding-top: 1%;
+    zoom: 120%;
+}
+
+#targetTemperature{
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    outline-style: none;
+}
+.temperature{
+    padding-top: 1%;
+    padding-bottom: 4%;
+}
+.btngoShow{
+    width: 300px;
+    text-align: center;
+
+}
+
+#btngoShow, #btnReset{
+    width: 100px;
+    height: 40px;
+    border: thick double;
+    border-color: rgb(170, 92, 153);
+    border-radius: 20px;
+    margin-right: 20px;
+    outline-style: none;
+}
