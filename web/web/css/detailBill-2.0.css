@@ -1,0 +1,27 @@
+body{
+    margin: 0px;
+    background-image: url(../image/1.png);
+    background-size: 100%;
+}
+#title{
+    height: 100px;
+    padding-top: 5%;
+    color: rgb(54, 53, 34);
+}
+#billTitle{
+    padding-bottom: 10%;
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgb(237, 248, 173);
+}
+#detailTable{
+    text-align: center;
+    width: 100%;
+    background-color: aliceblue;
+}
+#detailTable td{
+    background-color: rgba(250, 230, 115, 0.877);
+    border: 1px solid #9b2761af;
+    height: 40px;
+    width: 11%;
+}
