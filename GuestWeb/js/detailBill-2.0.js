@@ -20,9 +20,9 @@ function creatTable(data) {
     tbData += "<td>" + "总费用（元）" + "</td>"
     tbData += "<td>" + "服务开始时间" + "</td>"
     tbData += "<td>" + "服务终止时间" + "</td>"
-    tbData += "<td>" + "服务持续时间（秒）" + "</td>"
+    tbData += "<td>" + "服务持续时间（分钟）" + "</td>"
     tbData += "<td>" + "风速" + "</td>"
-    tbData += "<td>" + "费率（元/秒）" + "</td>"
+    tbData += "<td>" + "费率（元/分钟）" + "</td>"
     tbData += "<td>" + "服务开始温度" + "</td>"
     tbData += "<td>" + "服务终止温度" + "</td>"
     tbData += "</tr>"
@@ -36,9 +36,9 @@ function creatTable(data) {
 
     var stopTime = getStopTime(data.serviceRecords[0].serviceStartTime, data.serviceRecords[0].lastTime)
     tbData += "<td>" + stopTime + "</td>"
-    tbData += "<td>" + data.serviceRecords[0].lastTime + "</td>"
+    tbData += "<td>" + Number(data.serviceRecords[0].lastTime / 60).toFixed(0) + "</td>"
     tbData += "<td>" + data.serviceRecords[0].wind + "</td>"
-    tbData += "<td>" + Number((Number(data.serviceRecords[0].totalCost/100).toFixed(2)) / data.serviceRecords[0].lastTime).toFixed(2) + "</td>"
+    tbData += "<td>" + Number((Number(data.serviceRecords[0].totalCost/100).toFixed(2)) / Number(data.serviceRecords[0].lastTime / 60)).toFixed(2) + "</td>"
     tbData += "<td>" + Number(data.serviceRecords[0].startTemperature).toFixed(1) + "</td>"
     tbData += "<td>" + Number(data.serviceRecords[0].endTemperature).toFixed(1) + "</td>"
     tbData += "</tr>"
