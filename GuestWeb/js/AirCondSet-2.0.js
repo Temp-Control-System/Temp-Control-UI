@@ -11,10 +11,12 @@ $(document).ready(function () {
     //1. 获取并校验调温请求
     $("#targetTemperature").blur(function () { 
         targetT = $("#targetTemperature").val();
-        if (targetT < 18 || targetT > 30 ) {
-            $("#checkTemp").text("温度设置出错，请重新设置，范围应在18-30℃");
+        if (targetT < 18 || targetT > 25 ) {
+            $("#checkTemp").text("温度设置出错，请重新设置，范围应在18-25℃");
             $("#targetTemperature").val('');
-        }    
+        } else {
+            $("#checkTemp").text("");
+        }
     });
 
     //4. 发送调温调风请求
@@ -22,7 +24,7 @@ $(document).ready(function () {
 		//2. 获取调风数据
 		wind = $("input[name='wind']:checked").val();
 		//3. 获取选择模式	
-		mode = $("input[name='mode']:checked").val();        
+        mode = $("input[name='mode']:checked").val();              
 	
 		console.log(mode,wind);
         $.ajax({
