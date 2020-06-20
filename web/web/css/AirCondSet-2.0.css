@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+body {
+    margin: 0px;
+    background-image: url(../image/3.png);
+    background-size: 100%;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 0 0 8px rgba(185, 136, 241, 0.925);
+}
+
+#roomId {
+    border-style: none;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 18px;
+}
+
+#form1 {
+    float: left;
+    background-color: rgba(255, 255, 255, 0.336);
+    width: 60%;
+    padding-left: 40%;
+    text-align: left;
+    line-height: 50px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#wind,
+#mode {
+    padding-bottom: 4%;
+    padding-top: 1%;
+    zoom: 120%;
+}
+
+#targetTemperature {
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    outline-style: none;
+}
+
+.temperature {
+    padding-top: 1%;
+    padding-bottom: 4%;
+}
+
+.btngoShow {
+    width: 300px;
+    text-align: center;
+
+}
+
+#btngoShow,
+#btnReset {
+    width: 100px;
+    height: 40px;
+    border: thick double;
+    border-color: rgb(170, 92, 153);
+    border-radius: 20px;
+    margin-right: 20px;
+    outline-style: none;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>空调状态设置</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/AirCondSet-2.0.js"></script>
+    <link rel="stylesheet" href="./css/AirCondSet-2.0.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header><b>空调状态设置</b></header>
+        <form method="POST" name="form1" id="form1">
+            <div class="room">
+                Room<input name="roomId" id="roomId">
+            </div>
+            <div class="airInfo">
+                <div class="wind">
+                    <span>风速</span>
+                    <input type="radio" name="wind" id="wind" value="LOW" />LOW
+                    <input type="radio" name="wind" id="wind" value="MIDDLE" />MIDDLE
+                    <input type="radio" name="wind" id="wind" value="HIGH" />HIGH
+                </div>
+                <div class="mode">
+                    <span>模式</span>
+                    <input type="radio" name="mode" id="mode" value="REFRIGERATION">REFRIGERATION
+                    <input type="radio" name="mode" id="mode" value="HEATING">HEATING
+                </div>
+                <div class="temperature">
+                    <span>温度</span>
+                    <input type="text" required name="targetTemperature" id="targetTemperature">
+                    <span id="checkTemp"></span>
+                </div>
+                <div class="btngoShow">
+                    <button type="submit" id="btngoShow" onclick="affirm();return false;">确认</button>
+                    <button type="reset" id="btnReset">重置</button>
+                </div>
+            </div>
+        </form> 
+    </div>
+</body>
+
+</html>
