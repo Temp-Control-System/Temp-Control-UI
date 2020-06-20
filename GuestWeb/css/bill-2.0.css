@@ -1,0 +1,35 @@
+body {
+    margin: 0px;
+    background-image: url(../image/2.png);
+    background-size: 100%;
+}
+
+#billTitle {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 0 0 10px orange;
+}
+
+#billTable {
+    padding-left: 30%;
+    padding-right: 30%;
+    width: 100%;
+}
+
+#billTable td:nth-child(1) {
+    background-color: rgb(247, 191, 127);
+    border: 1px solid #9b2761af;
+    height: 40px;
+    width: 20%;
+    text-align: center;
+}
+
+#billTable td:nth-child(2) {
+    background-color: rgba(250, 244, 167, 0.795);
+    border: 1px solid #9b2761af;
+    height: 40px;
+    width: 40%;
+    text-align: center;
+}
