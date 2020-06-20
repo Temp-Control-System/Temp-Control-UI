@@ -36,8 +36,8 @@ function creatTable(data) {
     tbData += "<tr><td>总费用（元）</td>"
     var cost = Number(data.totalCost / 100).toFixed(2)
     tbData += "<td>" + cost + "</td></tr>"
-    tbData += "<tr><td>总服务时长（秒）</td>"
-    tbData += "<td>" + data.totalServiceTime + "</td></tr>"
+    tbData += "<tr><td>总服务时长（分钟）</td>"
+    tbData += "<td>" + Number(data.totalServiceTime / 60).toFixed(0) + "</td></tr>"
     tbData += "<tr><td>服务次数</td>"
     tbData += "<td>" + data.serviceNum + "</td></tr>"
     $("#billTable").html(tbData)
