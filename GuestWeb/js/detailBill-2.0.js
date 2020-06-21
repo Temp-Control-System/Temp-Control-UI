@@ -29,7 +29,7 @@ function creatTable(data) {
 
     tbData += "<tr>"
     tbData += "<td>" + data.serviceRecords[0].roomId + "</td>"
-    tbData += "<td>" + Number(data.totalCost / 100).toFixed(2) + "</td>"
+    tbData += "<td>" + Number(data.totalCost / 100).toFixed(3) + "</td>"
     
     var startTime = timeFormat(data.serviceRecords[0].serviceStartTime); //调整格式
     tbData += "<td>" + startTime + "</td>"
@@ -38,7 +38,7 @@ function creatTable(data) {
     tbData += "<td>" + stopTime + "</td>"
     tbData += "<td>" + Number(data.serviceRecords[0].lastTime / 60).toFixed(0) + "</td>"
     tbData += "<td>" + data.serviceRecords[0].wind + "</td>"
-    tbData += "<td>" + Number((Number(data.serviceRecords[0].totalCost/100).toFixed(2)) / Number(data.serviceRecords[0].lastTime / 60)).toFixed(2) + "</td>"
+    tbData += "<td>" + Number(Number(data.serviceRecords[0].totalCost/100) / Number(data.serviceRecords[0].lastTime / 60)).toFixed(2) + "</td>"
     tbData += "<td>" + Number(data.serviceRecords[0].startTemperature).toFixed(1) + "</td>"
     tbData += "<td>" + Number(data.serviceRecords[0].endTemperature).toFixed(1) + "</td>"
     tbData += "</tr>"
@@ -53,9 +53,9 @@ function creatTable(data) {
         stopTime = getStopTime(data.serviceRecords[i].serviceStartTime, data.serviceRecords[i].lastTime)
         tbData += "<td>" + stopTime + "</td>"
 
-        tbData += "<td>" + data.serviceRecords[i].lastTime + "</td>"
+        tbData += "<td>" + Number(data.serviceRecords[i].lastTime / 60).toFixed(2) + "</td>"
         tbData += "<td>" + data.serviceRecords[i].wind + "</td>"
-        tbData += "<td>" + Number((Number(data.serviceRecords[i].totalCost/100).toFixed(2)) / data.serviceRecords[i].lastTime).toFixed(2) + "</td>"
+        tbData += "<td>" + Number(Number(data.serviceRecords[i].totalCost/100) / Number(data.serviceRecords[i].lastTime / 60 )).toFixed(2) + "</td>"
         tbData += "<td>" + Number(data.serviceRecords[i].startTemperature).toFixed(1) + "</td>"
         tbData += "<td>" + Number(data.serviceRecords[i].endTemperature).toFixed(1) + "</td>"
 
