@@ -50,10 +50,11 @@ function shutDown() {
 	$.ajax({
 		type: "GET",
 		url: urlTest + cmdOff,
-		data: { "roomId": roomId },
+		data: { "roomId": $("#roomId").text() },
 		dataType: "json",
 		success: function (response) {
 			alert("空调已关闭"); //想一下之后有没有更好的提示方法
+			// 发送ajax请求， 房间回复初始温度&风速
 		}
 	});
 }
@@ -64,7 +65,7 @@ function downBill() {
 	$.ajax({
 		type: "GET",
 		url: urlTest + cmdBill,
-		data: { "roomId": roomId },
+		data: { "roomId": $("#roomId").text() },
 		dataType: "json",
 		success: function (response) {
 			window.location = "./bill-2.0.html?roomId=" + $("#roomId").text();
@@ -76,7 +77,7 @@ function downDetail() {
 	$.ajax({
 		type: "GET",
 		url: urlTest + cmdBill,
-		data: { "roomId": roomId },
+		data: { "roomId": $("#roomId").text() },
 		dataType: "json",
 		success: function (response) {
 			//alert(JSON.stringify(response))
@@ -128,16 +129,16 @@ function draw() {
 				boundaryGap: [0.2, 0.2]
 			}
 		],
-		series: [ //loading阶段随机生成数
+		series: [ //loading阶段初始化计费为0，温度为25
 			{
 				name: '花费/cent',
-				type: 'bar',
+				type: 'line',
 				yAxisIndex: 1,
 				data: (function () {
 					var res = [];
 					var len = 10;
 					while (len--) {
-						res.push(Math.round(Math.random() * 1000));
+						res.push(0);
 					}
 					return res;
 				})()
@@ -149,7 +150,7 @@ function draw() {
 					var res = [];
 					var len = 0;
 					while (len < 10) {
-						res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+						res.push(25);
 						len++;
 					}
 					return res;
@@ -189,5 +190,5 @@ function draw() {
 				myChart.setOption(option);
 			}
 		});
-	}, 1000);
+	}, 10000); //10秒更新一次
 }	
