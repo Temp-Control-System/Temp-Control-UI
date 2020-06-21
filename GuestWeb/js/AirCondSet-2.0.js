@@ -2,12 +2,26 @@ var affirm;
 $(document).ready(function () {
     var urlTest = "https://mockapi.eolinker.com/1hywENt9b4bf5cdb7381fe38284a05d44d0631cf253c095";
     var urlAdd = "/add"
+    var query = "/query?"
     var roomId=GetQueryString("roomId");
     $("#roomId").val(roomId);
     
     var wind;
     var mode;
     var targetT;
+
+    // 0. 设置表单默认值，即上次设置的参数值 （上次未设置过的填缺省： wind 中风， mode refrigeration， temperature 25℃）
+    $.ajax({
+        type: "GET",
+        url: urlTest+query,
+        data: {"roomId": roomId},
+        dataType: "json",
+        success: function (response) {
+            $("input[value='"+response.wind+"']").attr("checked", true);
+            $("input[value='"+response.mode+"']").attr("checked", true);
+            $("#targetTemperature").val(response.targetTemperature)
+        }
+    });
     //1. 获取并校验调温请求
     $("#targetTemperature").blur(function () { 
         targetT = $("#targetTemperature").val();
@@ -24,7 +38,7 @@ $(document).ready(function () {
 		//2. 获取调风数据
 		wind = $("input[name='wind']:checked").val();
 		//3. 获取选择模式	
-        mode = $("input[name='mode']:checked").val();              
+        mode = $("input[name='mode']:checked").val();      
 	
 		console.log(mode,wind);
         $.ajax({
