@@ -10,7 +10,7 @@ $(document).ready(function () {
     var mode;
     var targetT;
 
-    // 0. 设置表单默认值，即上次设置的参数值 （上次未设置过的填缺省： wind 中风， mode refrigeration， temperature 25℃）
+    // 0. 设置表单默认值 （上次未设置过的填缺省： wind 中风， mode refrigeration， temperature 25℃）
     $.ajax({
         type: "GET",
         url: urlTest+query,
@@ -35,12 +35,12 @@ $(document).ready(function () {
 
     //4. 发送调温调风请求
     affirm=function (){
-		//2. 获取调风数据
-		wind = $("input[name='wind']:checked").val();
-		//3. 获取选择模式	
+	//2. 获取调风数据
+	wind = $("input[name='wind']:checked").val();
+	//3. 获取选择模式	
         mode = $("input[name='mode']:checked").val();      
-	
-		console.log(mode,wind);
+        targetT = $("#targetTemperature").val();
+	//console.log(mode,wind);
         $.ajax({
             type: "POST",
             url: urlTest+urlAdd,
