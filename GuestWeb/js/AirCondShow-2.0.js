@@ -54,7 +54,6 @@ function shutDown() {
 		dataType: "json",
 		success: function (response) {
 			alert("空调已关闭"); //想一下之后有没有更好的提示方法
-			// 发送ajax请求， 房间回复初始温度&风速
 		}
 	});
 }
@@ -62,33 +61,15 @@ function shutDown() {
 //4. 下载账单  
 var cmdBill = "/detail_bill?"
 function downBill() {
-	$.ajax({
-		type: "GET",
-		url: urlTest + cmdBill,
-		data: { "roomId": $("#roomId").text() },
-		dataType: "json",
-		success: function (response) {
-			window.location = "./bill-2.0.html?roomId=" + $("#roomId").text();
-		}
-	});
+	window.location = "./bill-2.0.html?roomId=" + $("#roomId").text();
 }
 //5. 下载详单
 function downDetail() {
-	$.ajax({
-		type: "GET",
-		url: urlTest + cmdBill,
-		data: { "roomId": $("#roomId").text() },
-		dataType: "json",
-		success: function (response) {
-			//alert(JSON.stringify(response))
-			window.location = "./detailBill-2.0.html?roomId=" + $("#roomId").text();
-		}
-	});
+	window.location = "./detailBill-2.0.html?roomId=" + $("#roomId").text();
 }
 
 //6. 显示实时计费表 横坐标只保留时分秒
 function draw() {
-
 	var myChart = echarts.init(document.getElementById('realCharts'))
 	myChart.showLoading()
 	option = {
