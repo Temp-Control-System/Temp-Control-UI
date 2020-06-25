@@ -9,7 +9,11 @@ $(document).ready(function () {
         data: { "roomId": roomId },
         dataType: "json",
         success: function (response) {
-            creatTable(response)
+            if(response.serviceNum == 0){
+                alert("用户当前未使用空调， 无服务记录");
+            } else{
+                creatTable(response)   
+            }
         }
     });
 });
