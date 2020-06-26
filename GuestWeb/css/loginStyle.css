@@ -1,0 +1,27 @@
+body{
+    margin: 0px;
+    background-image: url(../image/2.png);
+    background-size: 100%;
+}
+header{
+    padding-top: 5%;
+    height: 20%;
+    text-align: center;
+    font-size: 70px;
+    font-family:'Courier New', Courier, monospace;
+    opacity: 1;
+}
+.log{
+    padding-top:15%;
+    text-align: center;
+}
+#logbtn{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(199, 230, 142);
+    text-align: center;
+    border: thick double;
+    border-color: rgb(144, 202, 126);
+    border-radius: 10px;
+    outline-style: none;
+}

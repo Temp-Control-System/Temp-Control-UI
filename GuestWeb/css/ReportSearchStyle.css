@@ -1,0 +1,120 @@
+@charset "UTF-8";
+body{
+    margin: 0px;
+    background-image: url(../image/3.png);
+    background-size: 100%;
+}
+header{
+    width:100%;
+    text-align:center;
+    padding-top:5%;
+    padding-bottom:5%;
+    font-size:70px;
+    float:left;
+}
+.exit{
+    width:95%;
+    float:left;
+    padding-right: 10%;
+}
+#btn2exit{
+    /*padding:15px 32px;*/
+    /*font-size: 16px;*/
+    /*float:right;*/
+    padding: 10px 20px;
+    float:right;
+    font-size: 16px;
+    background-color: rgb(199, 230, 142);
+    text-align: center;
+    border: thick double;
+    border-color: rgb(144, 202, 126);
+    border-radius: 10px;
+    outline-style: none;
+}
+.search{
+    width:100%;
+    padding-top:25%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 40px;
+}
+#start{
+    width:300px;
+    height:50px;
+    font-size: 30px;
+}
+#end{
+    width: 250px;
+    height:50px;
+    font-size: 30px;
+}
+.btn{
+    /*padding-top: 5%;*/
+    /*padding-bottom: 5%;*/
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 100px;
+}
+#btn2search{
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    background-color: rgb(199, 230, 142);
+    border: thick double;
+    border-color: rgb(144, 202, 126);
+    border-radius: 10px;
+    outline-style: none;
+
+}
+#btn2Renew{
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    background-color: rgb(199, 230, 142);
+    border: thick double;
+    border-color: rgb(144, 202, 126);
+    border-radius: 10px;
+    outline-style: none;
+}
+
+/*.reportTitle{
+    width:100%;
+    text-align: center;
+    float:left;
+    background: pink;
+    font-size: 30px;
+}
+.reportInfo{
+    width:100%;
+    text-align: center;
+    float:left;
+    background: orange;
+    font-size: 30px;
+}
+ul{
+    float:left;
+    list-style: none;
+    width:12%;
+    text-align: center;
+}
+ul:nth-child(1){
+    background: limegreen;
+}
+ul:nth-child(2){
+    background: lightgoldenrodyellow;
+}
+ul:nth-child(3){
+    background: skyblue;
+}
+ul:nth-child(4){
+    background: yellow;
+}
+ul:nth-child(5){
+    background: indianred;
+}
+ul:nth-child(6){
+    background: blue;
+}
+ul:nth-child(7){
+    background: green;
+}*/
