@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type="text/css" href="css/ReportSearchStyle.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/ReportSearchJS.js"></script>
+
+    <title>报表查询</title>
+</head>
+<body>
+    <div class = "exit">
+            <div class = "exitButton">
+                <button id="btn2exit" onclick="quit()">退出登录</button>
+        </div>
+    </div>
+    <header>
+        <strong>空调报表查询</strong>
+    </header>
+    <form method="get" id="form1">
+    <div class = "search">
+        起始日期：<input type="date" required id="start">
+        截止日期：<input type="date" required id="end">
+    </div>
+    <div class="btn">
+        <button id="btn2search" type="submit" onclick="affirm();return false;">查询</button>
+        <button id="btn2Renew" type="Reset">重置</button>
+    </div>
+    </form>
+</body>
+</html>
